@@ -1,7 +1,10 @@
-def caching_fibonacci():
+from typing import Callable
+
+
+def caching_fibonacci() -> Callable[[int], int]:
     cache = {}
 
-    def fibonacci(n):
+    def fibonacci(n: int) -> int:
         """
         Calculates fibonacci number
         """

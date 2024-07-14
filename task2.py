@@ -3,13 +3,18 @@ from typing import Callable
 
 
 def generator_numbers(text: str):
-    words_list = re.findall(r"\d+\.\d+", text)
-    # print(words_list)
+    """
+    Generator function takes all floats from the text
+    """
+    words_list = re.findall(r"\s\d+\.\d+\s", text)
     for num in words_list:
         yield float(num)
 
 
 def sum_profit(text: str, func: Callable):
+    """
+    Sum all float numbers
+    """
     sum = 0
     for k in generator_numbers(text):
         sum += k

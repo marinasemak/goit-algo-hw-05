@@ -1,8 +1,9 @@
 import re
 from typing import Callable
+from typing import Generator
 
 
-def generator_numbers(text: str):
+def generator_numbers(text: str) -> Generator[int, None, None]:
     """
     Generator function takes all floats from the text
     """

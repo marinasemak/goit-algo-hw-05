@@ -6,7 +6,7 @@ def generator_numbers(text: str):
     """
     Generator function takes all floats from the text
     """
-    words_list = re.findall(r"\s\d+\.\d+\s", text)
+    words_list = re.findall(r"\b\d+\.\d+\b|\b\d+\b", text)
     for num in words_list:
         yield float(num)
 
